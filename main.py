@@ -6,7 +6,9 @@ from datetime import datetime
 
 app = FastAPI(title="CREATIVE API")
 
-init_db()
+@app.get("/")
+def root():
+    return {"status": "CREATIVE API ONLINE 🚀"}
 
 # ========== REGISTER ==========
 @app.post("/register")
